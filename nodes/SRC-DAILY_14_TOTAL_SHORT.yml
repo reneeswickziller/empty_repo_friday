@@ -1,0 +1,48 @@
+steps:
+  DAILY_14_TOTAL_SHORT-2:
+    operation:
+      database: ""
+      dataset: ""
+      deployEnabled: true
+      locationID: ""
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 9
+              stepCounter: 2
+            config: {}
+            dataType: VARIANT
+            defaultValue: ""
+            description: ""
+            name: V
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 10
+              stepCounter: 2
+            config: {}
+            dataType: TIMESTAMP_NTZ(9)
+            defaultValue: ""
+            description: ""
+            name: T
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'DAILY_14_TOTAL_SHORT') }}
+      name: DAILY_14_TOTAL_SHORT
+      schema: ""
+      sqlType: Source
+      table: DAILY_14_TOTAL_SHORT
+      type: sourceInput
+    stepCounter: "2"
