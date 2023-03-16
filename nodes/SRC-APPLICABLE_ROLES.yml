@@ -1,10 +1,9 @@
 steps:
-  REGION-8:
+  APPLICABLE_ROLES-118:
     operation:
       database: ""
       dataset: ""
-      deployEnabled: true
-      locationID: ""
+      locationID: 1
       locationName: SRC
       metadata:
         columns:
@@ -13,13 +12,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 54
-              stepCounter: 8
+              columnCounter: 849
+              stepCounter: 118
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: R_REGIONKEY
+            name: GRANTEE
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -28,13 +27,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 55
-              stepCounter: 8
+              columnCounter: 850
+              stepCounter: 118
             config: {}
-            dataType: VARCHAR(25)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: R_NAME
+            name: ROLE_NAME
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -43,21 +42,36 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 56
-              stepCounter: 8
+              columnCounter: 851
+              stepCounter: 118
             config: {}
-            dataType: VARCHAR(152)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: R_COMMENT
+            name: ROLE_OWNER
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 852
+              stepCounter: 118
+            config: {}
+            dataType: VARCHAR(3)
+            defaultValue: ""
+            description: ""
+            name: IS_GRANTABLE
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SRC', 'REGION') }}
-      name: REGION
+          joinCondition: FROM {{ ref('SRC', 'APPLICABLE_ROLES') }}
+      name: APPLICABLE_ROLES
       schema: ""
       sqlType: Source
-      table: REGION
+      table: APPLICABLE_ROLES
       type: sourceInput
-    stepCounter: "8"
+    stepCounter: "118"

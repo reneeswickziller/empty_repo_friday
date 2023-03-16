@@ -1,9 +1,8 @@
 steps:
-  DAILY_14_TOTAL_SHORT-2:
+  DAILY_14_TOTAL-84:
     operation:
       database: ""
       dataset: ""
-      deployEnabled: true
       locationID: ""
       locationName: SRC
       metadata:
@@ -13,8 +12,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 9
-              stepCounter: 2
+              columnCounter: 722
+              stepCounter: 84
             config: {}
             dataType: VARIANT
             defaultValue: ""
@@ -28,8 +27,8 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 10
-              stepCounter: 2
+              columnCounter: 723
+              stepCounter: 84
             config: {}
             dataType: TIMESTAMP_NTZ(9)
             defaultValue: ""
@@ -39,10 +38,10 @@ steps:
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SRC', 'DAILY_14_TOTAL_SHORT') }}
-      name: DAILY_14_TOTAL_SHORT
+          joinCondition: FROM {{ ref('SRC', 'DAILY_14_TOTAL') }}
+      name: DAILY_14_TOTAL
       schema: ""
       sqlType: Source
-      table: DAILY_14_TOTAL_SHORT
+      table: DAILY_14_TOTAL
       type: sourceInput
-    stepCounter: "2"
+    stepCounter: "84"

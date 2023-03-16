@@ -1,0 +1,94 @@
+steps:
+  STG_DAILY_14_TOTAL11-113:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 833
+              stepCounter: 113
+            dataType: VARIANT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: V
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 780
+                    stepCounter: "100"
+                transform: ""
+          - columnReference:
+              columnCounter: 834
+              stepCounter: 113
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: T
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 781
+                    stepCounter: "100"
+                transform: ""
+          - columnReference:
+              columnCounter: 835
+              stepCounter: 113
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_CREATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 782
+                    stepCounter: "100"
+                transform: ""
+          - columnReference:
+              columnCounter: 836
+              stepCounter: 113
+            dataType: TIMESTAMP
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SYSTEM_UPDATE_DATE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 783
+                    stepCounter: "100"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: FCT_DAILY_14_TOTAL1
+            join:
+              joinCondition: FROM {{ ref('STAGE', 'FCT_DAILY_14_TOTAL1') }} "FCT_DAILY_14_TOTAL1"
+            name: STG_DAILY_14_TOTAL11
+            noLinkRefs: []
+      name: STG_DAILY_14_TOTAL11
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "113"

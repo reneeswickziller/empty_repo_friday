@@ -1,10 +1,9 @@
 steps:
-  STG_CUSTOMER1-10:
+  STAGES-135:
     operation:
       database: ""
       dataset: ""
-      deployEnabled: true
-      locationID: ""
+      locationID: 1
       locationName: SRC
       metadata:
         columns:
@@ -13,13 +12,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 65
-              stepCounter: 10
+              columnCounter: 1070
+              stepCounter: 135
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: C_CUSTKEY
+            name: STAGE_CATALOG
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -28,13 +27,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 66
-              stepCounter: 10
+              columnCounter: 1071
+              stepCounter: 135
             config: {}
-            dataType: VARCHAR(25)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: C_NAME
+            name: STAGE_SCHEMA
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -43,13 +42,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 67
-              stepCounter: 10
+              columnCounter: 1072
+              stepCounter: 135
             config: {}
-            dataType: VARCHAR(40)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: C_ADDRESS
+            name: STAGE_NAME
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -58,58 +57,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 68
-              stepCounter: 10
+              columnCounter: 1073
+              stepCounter: 135
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: C_NATIONKEY
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 69
-              stepCounter: 10
-            config: {}
-            dataType: VARCHAR(15)
-            defaultValue: ""
-            description: ""
-            name: C_PHONE
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 70
-              stepCounter: 10
-            config: {}
-            dataType: NUMBER(12,2)
-            defaultValue: ""
-            description: ""
-            name: C_ACCTBAL
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 71
-              stepCounter: 10
-            config: {}
-            dataType: VARCHAR(10)
-            defaultValue: ""
-            description: ""
-            name: C_MKTSEGMENT
+            name: STAGE_URL
             nullable: true
             primaryKey: false
             uniqueKey: false
@@ -118,21 +72,96 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 72
-              stepCounter: 10
+              columnCounter: 1074
+              stepCounter: 135
             config: {}
-            dataType: VARCHAR(117)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: C_COMMENT
+            name: STAGE_REGION
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1075
+              stepCounter: 135
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: STAGE_TYPE
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1076
+              stepCounter: 135
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: STAGE_OWNER
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1077
+              stepCounter: 135
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: COMMENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1078
+              stepCounter: 135
+            config: {}
+            dataType: TIMESTAMP_LTZ(9)
+            defaultValue: ""
+            description: ""
+            name: CREATED
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1079
+              stepCounter: 135
+            config: {}
+            dataType: TIMESTAMP_LTZ(9)
+            defaultValue: ""
+            description: ""
+            name: LAST_ALTERED
             nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SRC', 'STG_CUSTOMER1') }}
-      name: STG_CUSTOMER1
+          joinCondition: FROM {{ ref('SRC', 'STAGES') }}
+      name: STAGES
       schema: ""
       sqlType: Source
-      table: STG_CUSTOMER1
+      table: STAGES
       type: sourceInput
-    stepCounter: "10"
+    stepCounter: "135"

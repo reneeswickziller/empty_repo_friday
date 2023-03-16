@@ -1,0 +1,66 @@
+steps:
+  STG_DAILY_14_TOTAL-90:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 734
+              stepCounter: 90
+            dataType: VARIANT
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: V
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 722
+                    stepCounter: "84"
+                transform: ""
+          - columnReference:
+              columnCounter: 735
+              stepCounter: 90
+            dataType: TIMESTAMP_NTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: T
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 723
+                    stepCounter: "84"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: DAILY_14_TOTAL
+            join:
+              joinCondition: FROM {{ ref('SRC', 'DAILY_14_TOTAL') }} "DAILY_14_TOTAL"
+            name: STG_DAILY_14_TOTAL
+            noLinkRefs: []
+      name: STG_DAILY_14_TOTAL
+      overrideSQL: false
+      schema: ""
+      sqlType: "16"
+      type: sql
+    stepCounter: "90"

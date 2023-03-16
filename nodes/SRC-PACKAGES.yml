@@ -1,10 +1,9 @@
 steps:
-  NATION-4:
+  PACKAGES-128:
     operation:
       database: ""
       dataset: ""
-      deployEnabled: true
-      locationID: ""
+      locationID: 1
       locationName: SRC
       metadata:
         columns:
@@ -13,13 +12,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 27
-              stepCounter: 4
+              columnCounter: 988
+              stepCounter: 128
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: N_NATIONKEY
+            name: PACKAGE_NAME
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -28,13 +27,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 28
-              stepCounter: 4
+              columnCounter: 989
+              stepCounter: 128
             config: {}
-            dataType: VARCHAR(25)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: N_NAME
+            name: VERSION
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -43,36 +42,21 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 29
-              stepCounter: 4
+              columnCounter: 990
+              stepCounter: 128
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: N_REGIONKEY
+            name: LANGUAGE
             nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 30
-              stepCounter: 4
-            config: {}
-            dataType: VARCHAR(152)
-            defaultValue: ""
-            description: ""
-            name: N_COMMENT
-            nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SRC', 'NATION') }}
-      name: NATION
+          joinCondition: FROM {{ ref('SRC', 'PACKAGES') }}
+      name: PACKAGES
       schema: ""
       sqlType: Source
-      table: NATION
+      table: PACKAGES
       type: sourceInput
-    stepCounter: "4"
+    stepCounter: "128"

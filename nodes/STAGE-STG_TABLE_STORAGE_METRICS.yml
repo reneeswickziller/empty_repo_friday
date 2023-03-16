@@ -1,0 +1,290 @@
+steps:
+  STG_TABLE_STORAGE_METRICS-142:
+    operation:
+      config:
+        insertStrategy: INSERT
+        postSQL: ""
+        preSQL: ""
+        testsEnabled: true
+        truncateBefore: true
+      database: ""
+      dependencies: []
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationID: 2
+      locationName: STAGE
+      materializationType: table
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 1163
+              stepCounter: 142
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TABLE_CATALOG
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1124
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1164
+              stepCounter: 142
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TABLE_SCHEMA
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1125
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1165
+              stepCounter: 142
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TABLE_NAME
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1126
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1166
+              stepCounter: 142
+            dataType: NUMBER(9,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1127
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1167
+              stepCounter: 142
+            dataType: NUMBER(9,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CLONE_GROUP_ID
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1128
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1168
+              stepCounter: 142
+            dataType: VARCHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: IS_TRANSIENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1129
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1169
+              stepCounter: 142
+            dataType: NUMBER(9,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: ACTIVE_BYTES
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1130
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1170
+              stepCounter: 142
+            dataType: NUMBER(9,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TIME_TRAVEL_BYTES
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1131
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1171
+              stepCounter: 142
+            dataType: NUMBER(9,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: FAILSAFE_BYTES
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1132
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1172
+              stepCounter: 142
+            dataType: NUMBER(9,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: RETAINED_FOR_CLONE_BYTES
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1133
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1173
+              stepCounter: 142
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TABLE_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1134
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1174
+              stepCounter: 142
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TABLE_DROPPED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1135
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1175
+              stepCounter: 142
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: TABLE_ENTERED_FAILSAFE
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1136
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1176
+              stepCounter: 142
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CATALOG_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1137
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1177
+              stepCounter: 142
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: CATALOG_DROPPED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1138
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1178
+              stepCounter: 142
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SCHEMA_CREATED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1139
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1179
+              stepCounter: 142
+            dataType: TIMESTAMP_LTZ(9)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SCHEMA_DROPPED
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1140
+                    stepCounter: "139"
+                transform: ""
+          - columnReference:
+              columnCounter: 1180
+              stepCounter: 142
+            dataType: VARCHAR(16777216)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1141
+                    stepCounter: "139"
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: SRC
+                nodeName: TABLE_STORAGE_METRICS
+            join:
+              joinCondition: FROM {{ ref('SRC', 'TABLE_STORAGE_METRICS') }} "TABLE_STORAGE_METRICS"
+            name: STG_TABLE_STORAGE_METRICS
+            noLinkRefs: []
+      name: STG_TABLE_STORAGE_METRICS
+      overrideSQL: false
+      schema: ""
+      sqlType: Stage
+      type: sql
+    stepCounter: "142"

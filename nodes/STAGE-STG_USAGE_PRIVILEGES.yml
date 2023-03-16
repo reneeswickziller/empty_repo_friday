@@ -1,5 +1,5 @@
 steps:
-  STG_CUSTOMER2-13:
+  STG_USAGE_PRIVILEGES-143:
     operation:
       config:
         insertStrategy: INSERT
@@ -9,127 +9,140 @@ steps:
         truncateBefore: true
       database: ""
       dependencies: []
-      deployEnabled: true
       description: ""
       isDataVault: false
       isMultisource: false
-      locationID: ""
+      locationID: 2
       locationName: STAGE
       materializationType: table
       metadata:
         appliedNodeTests: []
         columns:
           - columnReference:
-              columnCounter: 96
-              stepCounter: "13"
-            dataType: NUMBER(38,0)
+              columnCounter: 1181
+              stepCounter: 143
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_CUSTKEY
+            name: GRANTOR
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 1
-                    stepCounter: "1"
+                  - columnCounter: 1142
+                    stepCounter: "140"
                 transform: ""
           - columnReference:
-              columnCounter: 97
-              stepCounter: "13"
-            dataType: VARCHAR(25)
+              columnCounter: 1182
+              stepCounter: 143
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_NAME
+            name: GRANTEE
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 2
-                    stepCounter: "1"
+                  - columnCounter: 1143
+                    stepCounter: "140"
                 transform: ""
           - columnReference:
-              columnCounter: 98
-              stepCounter: "13"
-            dataType: VARCHAR(40)
+              columnCounter: 1183
+              stepCounter: 143
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_ADDRESS
+            name: OBJECT_CATALOG
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 3
-                    stepCounter: "1"
+                  - columnCounter: 1144
+                    stepCounter: "140"
                 transform: ""
           - columnReference:
-              columnCounter: 99
-              stepCounter: "13"
-            dataType: NUMBER(38,0)
+              columnCounter: 1184
+              stepCounter: 143
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_NATIONKEY
+            name: OBJECT_SCHEMA
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 4
-                    stepCounter: "1"
+                  - columnCounter: 1145
+                    stepCounter: "140"
                 transform: ""
           - columnReference:
-              columnCounter: 100
-              stepCounter: "13"
-            dataType: VARCHAR(15)
+              columnCounter: 1185
+              stepCounter: 143
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_PHONE
+            name: OBJECT_NAME
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 5
-                    stepCounter: "1"
+                  - columnCounter: 1146
+                    stepCounter: "140"
                 transform: ""
           - columnReference:
-              columnCounter: 101
-              stepCounter: "13"
-            dataType: NUMBER(12,2)
+              columnCounter: 1186
+              stepCounter: 143
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_ACCTBAL
+            name: OBJECT_TYPE
             nullable: false
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 6
-                    stepCounter: "1"
+                  - columnCounter: 1147
+                    stepCounter: "140"
                 transform: ""
           - columnReference:
-              columnCounter: 102
-              stepCounter: "13"
-            dataType: VARCHAR(10)
+              columnCounter: 1187
+              stepCounter: 143
+            dataType: VARCHAR(16777216)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_MKTSEGMENT
+            name: PRIVILEGE_TYPE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 1148
+                    stepCounter: "140"
+                transform: ""
+          - columnReference:
+              columnCounter: 1188
+              stepCounter: 143
+            dataType: VARCHAR(3)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: IS_GRANTABLE
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 7
-                    stepCounter: "1"
+                  - columnCounter: 1149
+                    stepCounter: "140"
                 transform: ""
           - columnReference:
-              columnCounter: 103
-              stepCounter: "13"
-            dataType: VARCHAR(117)
+              columnCounter: 1189
+              stepCounter: 143
+            dataType: TIMESTAMP_LTZ(9)
             description: ""
             hashColumns: []
             hashDetails: null
-            name: C_COMMENT
+            name: CREATED
             nullable: true
             sourceColumnReferences:
               - columnReferences:
-                  - columnCounter: 8
-                    stepCounter: "1"
+                  - columnCounter: 1150
+                    stepCounter: "140"
                 transform: ""
         cteString: ""
         enabledColumnTestIDs: []
@@ -138,14 +151,14 @@ steps:
               customSQL: ""
             dependencies:
               - locationName: SRC
-                nodeName: CUSTOMER
+                nodeName: USAGE_PRIVILEGES
             join:
-              joinCondition: FROM {{ ref('SRC', 'CUSTOMER') }} "CUSTOMER"
-            name: STG_CUSTOMER2
+              joinCondition: FROM {{ ref('SRC', 'USAGE_PRIVILEGES') }} "USAGE_PRIVILEGES"
+            name: STG_USAGE_PRIVILEGES
             noLinkRefs: []
-      name: STG_CUSTOMER2
+      name: STG_USAGE_PRIVILEGES
       overrideSQL: false
       schema: ""
       sqlType: Stage
       type: sql
-    stepCounter: "13"
+    stepCounter: "143"

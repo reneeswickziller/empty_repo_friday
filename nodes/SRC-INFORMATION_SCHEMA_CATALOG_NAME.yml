@@ -1,0 +1,32 @@
+steps:
+  INFORMATION_SCHEMA_CATALOG_NAME-125:
+    operation:
+      database: ""
+      dataset: ""
+      locationID: 1
+      locationName: SRC
+      metadata:
+        columns:
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 965
+              stepCounter: 125
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: CATALOG_NAME
+            nullable: false
+            primaryKey: false
+            uniqueKey: false
+        join:
+          joinCondition: FROM {{ ref('SRC', 'INFORMATION_SCHEMA_CATALOG_NAME') }}
+      name: INFORMATION_SCHEMA_CATALOG_NAME
+      schema: ""
+      sqlType: Source
+      table: INFORMATION_SCHEMA_CATALOG_NAME
+      type: sourceInput
+    stepCounter: "125"

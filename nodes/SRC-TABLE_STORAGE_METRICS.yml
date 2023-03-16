@@ -1,10 +1,9 @@
 steps:
-  LINEITEM-3:
+  TABLE_STORAGE_METRICS-139:
     operation:
       database: ""
       dataset: ""
-      deployEnabled: true
-      locationID: ""
+      locationID: 1
       locationName: SRC
       metadata:
         columns:
@@ -13,13 +12,58 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 11
-              stepCounter: 3
+              columnCounter: 1124
+              stepCounter: 139
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: L_ORDERKEY
+            name: TABLE_CATALOG
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1125
+              stepCounter: 139
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: TABLE_SCHEMA
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1126
+              stepCounter: 139
+            config: {}
+            dataType: VARCHAR(16777216)
+            defaultValue: ""
+            description: ""
+            name: TABLE_NAME
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1127
+              stepCounter: 139
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: ""
+            name: ID
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -28,13 +72,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 12
-              stepCounter: 3
+              columnCounter: 1128
+              stepCounter: 139
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: L_PARTKEY
+            name: CLONE_GROUP_ID
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -43,13 +87,28 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 13
-              stepCounter: 3
+              columnCounter: 1129
+              stepCounter: 139
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: VARCHAR(3)
             defaultValue: ""
             description: ""
-            name: L_SUPPKEY
+            name: IS_TRANSIENT
+            nullable: true
+            primaryKey: false
+            uniqueKey: false
+          - acceptedValues:
+              strictMatch: true
+              values: []
+            appliedColumnTests: {}
+            columnReference:
+              columnCounter: 1130
+              stepCounter: 139
+            config: {}
+            dataType: NUMBER(9,0)
+            defaultValue: ""
+            description: ""
+            name: ACTIVE_BYTES
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -58,13 +117,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 14
-              stepCounter: 3
+              columnCounter: 1131
+              stepCounter: 139
             config: {}
-            dataType: NUMBER(38,0)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: L_LINENUMBER
+            name: TIME_TRAVEL_BYTES
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -73,13 +132,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 15
-              stepCounter: 3
+              columnCounter: 1132
+              stepCounter: 139
             config: {}
-            dataType: NUMBER(12,2)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: L_QUANTITY
+            name: FAILSAFE_BYTES
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -88,13 +147,13 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 16
-              stepCounter: 3
+              columnCounter: 1133
+              stepCounter: 139
             config: {}
-            dataType: NUMBER(12,2)
+            dataType: NUMBER(9,0)
             defaultValue: ""
             description: ""
-            name: L_EXTENDEDPRICE
+            name: RETAINED_FOR_CLONE_BYTES
             nullable: false
             primaryKey: false
             uniqueKey: false
@@ -103,14 +162,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 17
-              stepCounter: 3
+              columnCounter: 1134
+              stepCounter: 139
             config: {}
-            dataType: NUMBER(12,2)
+            dataType: TIMESTAMP_LTZ(9)
             defaultValue: ""
             description: ""
-            name: L_DISCOUNT
-            nullable: false
+            name: TABLE_CREATED
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -118,14 +177,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 18
-              stepCounter: 3
+              columnCounter: 1135
+              stepCounter: 139
             config: {}
-            dataType: NUMBER(12,2)
+            dataType: TIMESTAMP_LTZ(9)
             defaultValue: ""
             description: ""
-            name: L_TAX
-            nullable: false
+            name: TABLE_DROPPED
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -133,14 +192,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 19
-              stepCounter: 3
+              columnCounter: 1136
+              stepCounter: 139
             config: {}
-            dataType: VARCHAR(1)
+            dataType: TIMESTAMP_LTZ(9)
             defaultValue: ""
             description: ""
-            name: L_RETURNFLAG
-            nullable: false
+            name: TABLE_ENTERED_FAILSAFE
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -148,14 +207,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 20
-              stepCounter: 3
+              columnCounter: 1137
+              stepCounter: 139
             config: {}
-            dataType: VARCHAR(1)
+            dataType: TIMESTAMP_LTZ(9)
             defaultValue: ""
             description: ""
-            name: L_LINESTATUS
-            nullable: false
+            name: CATALOG_CREATED
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -163,14 +222,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 21
-              stepCounter: 3
+              columnCounter: 1138
+              stepCounter: 139
             config: {}
-            dataType: DATE
+            dataType: TIMESTAMP_LTZ(9)
             defaultValue: ""
             description: ""
-            name: L_SHIPDATE
-            nullable: false
+            name: CATALOG_DROPPED
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -178,14 +237,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 22
-              stepCounter: 3
+              columnCounter: 1139
+              stepCounter: 139
             config: {}
-            dataType: DATE
+            dataType: TIMESTAMP_LTZ(9)
             defaultValue: ""
             description: ""
-            name: L_COMMITDATE
-            nullable: false
+            name: SCHEMA_CREATED
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -193,14 +252,14 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 23
-              stepCounter: 3
+              columnCounter: 1140
+              stepCounter: 139
             config: {}
-            dataType: DATE
+            dataType: TIMESTAMP_LTZ(9)
             defaultValue: ""
             description: ""
-            name: L_RECEIPTDATE
-            nullable: false
+            name: SCHEMA_DROPPED
+            nullable: true
             primaryKey: false
             uniqueKey: false
           - acceptedValues:
@@ -208,51 +267,21 @@ steps:
               values: []
             appliedColumnTests: {}
             columnReference:
-              columnCounter: 24
-              stepCounter: 3
+              columnCounter: 1141
+              stepCounter: 139
             config: {}
-            dataType: VARCHAR(25)
+            dataType: VARCHAR(16777216)
             defaultValue: ""
             description: ""
-            name: L_SHIPINSTRUCT
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 25
-              stepCounter: 3
-            config: {}
-            dataType: VARCHAR(10)
-            defaultValue: ""
-            description: ""
-            name: L_SHIPMODE
-            nullable: false
-            primaryKey: false
-            uniqueKey: false
-          - acceptedValues:
-              strictMatch: true
-              values: []
-            appliedColumnTests: {}
-            columnReference:
-              columnCounter: 26
-              stepCounter: 3
-            config: {}
-            dataType: VARCHAR(44)
-            defaultValue: ""
-            description: ""
-            name: L_COMMENT
-            nullable: false
+            name: COMMENT
+            nullable: true
             primaryKey: false
             uniqueKey: false
         join:
-          joinCondition: FROM {{ ref('SRC', 'LINEITEM') }}
-      name: LINEITEM
+          joinCondition: FROM {{ ref('SRC', 'TABLE_STORAGE_METRICS') }}
+      name: TABLE_STORAGE_METRICS
       schema: ""
       sqlType: Source
-      table: LINEITEM
+      table: TABLE_STORAGE_METRICS
       type: sourceInput
-    stepCounter: "3"
+    stepCounter: "139"
