@@ -1,164 +1,174 @@
-steps:
-  STG_USAGE_PRIVILEGES-143:
-    operation:
-      config:
-        insertStrategy: INSERT
-        postSQL: ""
-        preSQL: ""
-        testsEnabled: true
-        truncateBefore: true
-      database: ""
-      dependencies: []
-      description: ""
-      isDataVault: false
-      isMultisource: false
-      locationID: 2
-      locationName: STAGE
-      materializationType: table
-      metadata:
-        appliedNodeTests: []
-        columns:
-          - columnReference:
-              columnCounter: 1181
-              stepCounter: 143
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: GRANTOR
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1142
-                    stepCounter: "140"
-                transform: ""
-          - columnReference:
-              columnCounter: 1182
-              stepCounter: 143
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: GRANTEE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1143
-                    stepCounter: "140"
-                transform: ""
-          - columnReference:
-              columnCounter: 1183
-              stepCounter: 143
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: OBJECT_CATALOG
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1144
-                    stepCounter: "140"
-                transform: ""
-          - columnReference:
-              columnCounter: 1184
-              stepCounter: 143
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: OBJECT_SCHEMA
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1145
-                    stepCounter: "140"
-                transform: ""
-          - columnReference:
-              columnCounter: 1185
-              stepCounter: 143
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: OBJECT_NAME
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1146
-                    stepCounter: "140"
-                transform: ""
-          - columnReference:
-              columnCounter: 1186
-              stepCounter: 143
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: OBJECT_TYPE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1147
-                    stepCounter: "140"
-                transform: ""
-          - columnReference:
-              columnCounter: 1187
-              stepCounter: 143
-            dataType: VARCHAR(16777216)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: PRIVILEGE_TYPE
-            nullable: false
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1148
-                    stepCounter: "140"
-                transform: ""
-          - columnReference:
-              columnCounter: 1188
-              stepCounter: 143
-            dataType: VARCHAR(3)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: IS_GRANTABLE
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1149
-                    stepCounter: "140"
-                transform: ""
-          - columnReference:
-              columnCounter: 1189
-              stepCounter: 143
-            dataType: TIMESTAMP_LTZ(9)
-            description: ""
-            hashColumns: []
-            hashDetails: null
-            name: CREATED
-            nullable: true
-            sourceColumnReferences:
-              - columnReferences:
-                  - columnCounter: 1150
-                    stepCounter: "140"
-                transform: ""
-        cteString: ""
-        enabledColumnTestIDs: []
-        sourceMapping:
-          - customSQL:
-              customSQL: ""
-            dependencies:
-              - locationName: SRC
-                nodeName: USAGE_PRIVILEGES
-            join:
-              joinCondition: FROM {{ ref('SRC', 'USAGE_PRIVILEGES') }} "USAGE_PRIVILEGES"
-            name: STG_USAGE_PRIVILEGES
-            noLinkRefs: []
-      name: STG_USAGE_PRIVILEGES
-      overrideSQL: false
-      schema: ""
-      sqlType: Stage
-      type: sql
-    stepCounter: "143"
+fileVersion: 1
+id: "143"
+name: STG_USAGE_PRIVILEGES
+operation:
+  config:
+    insertStrategy: INSERT
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+    truncateBefore: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: STAGE
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1181"
+          stepCounter: "143"
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        hashDetails: null
+        name: GRANTOR
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1142"
+                stepCounter: "140"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1182"
+          stepCounter: "143"
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        hashDetails: null
+        name: GRANTEE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1143"
+                stepCounter: "140"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1183"
+          stepCounter: "143"
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        hashDetails: null
+        name: OBJECT_CATALOG
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1144"
+                stepCounter: "140"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1184"
+          stepCounter: "143"
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        hashDetails: null
+        name: OBJECT_SCHEMA
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1145"
+                stepCounter: "140"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1185"
+          stepCounter: "143"
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        hashDetails: null
+        name: OBJECT_NAME
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1146"
+                stepCounter: "140"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1186"
+          stepCounter: "143"
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        hashDetails: null
+        name: OBJECT_TYPE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1147"
+                stepCounter: "140"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1187"
+          stepCounter: "143"
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        hashDetails: null
+        name: PRIVILEGE_TYPE
+        nullable: false
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1148"
+                stepCounter: "140"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1188"
+          stepCounter: "143"
+        config: {}
+        dataType: VARCHAR(3)
+        description: ""
+        hashDetails: null
+        name: IS_GRANTABLE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1149"
+                stepCounter: "140"
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: "1189"
+          stepCounter: "143"
+        config: {}
+        dataType: TIMESTAMP_LTZ(9)
+        description: ""
+        hashDetails: null
+        name: CREATED
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: "1150"
+                stepCounter: "140"
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases: {}
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: USAGE_PRIVILEGES
+        join:
+          joinCondition: FROM {{ ref('SRC', 'USAGE_PRIVILEGES') }} "USAGE_PRIVILEGES"
+        name: STG_USAGE_PRIVILEGES
+        noLinkRefs: []
+  name: STG_USAGE_PRIVILEGES
+  overrideSQL: false
+  schema: ""
+  sqlType: Stage
+  type: sql
+  version: 1
+type: Node
